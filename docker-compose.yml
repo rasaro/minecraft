@@ -16,7 +16,7 @@ services:
           - node.role == manager
       labels:
         - traefik.enable=true
-        - traefik.tcp.routers.minecraft.rule=Host(`${PORTAINER_UI_DOMAIN}`)
+        - traefik.tcp.routers.minecraft.rule=Host(`${MINECRAFT_DOMAIN}`)
         - traefik.tcp.routers.minecraft.entryPoints=minecraft
         - traefik.tcp.services.minecraft.loadbalancer.server.port=25565
 
